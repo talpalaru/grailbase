@@ -10,9 +10,6 @@ databaseChangeLog = {
             column(name: "version", type: "bigint") {
                 constraints(nullable: "false")
             }
-            column(name: "version", type: "bigint") {
-                constraints(nullable: "false")
-            }
             column(name: "name", type: "varchar(1000)") {
                 constraints(nullable: "false")
            }

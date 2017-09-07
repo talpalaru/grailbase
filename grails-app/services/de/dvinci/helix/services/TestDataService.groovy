@@ -10,5 +10,10 @@ class TestDataService {
         new Tenant(name: "t1").save()
         new Tenant(name: "t2").save()
 
+        def searchName = "t1"
+        def nameContains = Tenant
+        .nameQuery("t1")
+            .list()
+        println(nameContains)
     }
 }
