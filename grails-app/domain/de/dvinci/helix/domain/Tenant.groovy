@@ -1,6 +1,8 @@
 package de.dvinci.helix.domain
 
-class Tenant {
+import grails.gorm.MultiTenant
+
+class Tenant implements  MultiTenant<Tenant>{
 
 
     static nameQuery = { x ->

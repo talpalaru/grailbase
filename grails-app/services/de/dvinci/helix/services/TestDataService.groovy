@@ -7,13 +7,10 @@ import grails.gorm.transactions.Transactional
 class TestDataService {
 
     void init() {
-        new Tenant(name: "t1").save()
+        // DEFAULT ist die default datasource für tenant, wenn mehrere DS definiert sind kann man sie so mit dem Namen anprechen
+        def t = Tenant.DEFAULT.create()
+        t.name = "t1"
+        t.save()
         new Tenant(name: "t2").save()
-
-        def searchName = "t1"
-        def nameContains = Tenant
-        .nameQuery("t1")
-            .list()
-        println(nameContains)
     }
 }

@@ -5,13 +5,13 @@ import de.dvinci.helix.domain.Tenant
 class TenantController {
 
     def index() {
-        render Tenant.findAll()
+        respond Tenant.findAll()
     }
 
 
-    def show() {
-        render Tenant
-            .nameQuery("t1")
-            .list()
-    }
+//    def show(tenant) {
+//        respond Tenant
+//            .nameQuery(tenant.name)
+//            .findAll()?.first()
+//    }
 }
